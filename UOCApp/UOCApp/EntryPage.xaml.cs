@@ -38,6 +38,12 @@ namespace UOCApp
 			Navigation.PopToRootAsync();
 		}
 
+		private void NavAbout(object sender, EventArgs args)
+		{
+			// Console.WriteLine("Clicked Nav Home");
+			Navigation.PushAsync(new AboutPage());
+		}
+
 		private void NavLeaderboard(object sender, EventArgs args)
 		{
 			// Console.WriteLine("Clicked Nav Leaderboard");
@@ -237,9 +243,9 @@ namespace UOCApp
 			return Decimal.Round(result, 3);
             }
         
-        catch (FormatException e)
+        catch (FormatException)
         {
-                throw new ArgumentException("Invalid Time\n Minimum 30 seconds\n Please enter as Minutes:Seconds");
+				throw new ArgumentException("Invalid Time\n Minimum 30 seconds\n Please enter as Minutes:Seconds");
 
         }
 		}

@@ -13,8 +13,8 @@ namespace UOCApp
 	{
 
         //safe to put constants here?
-        public const string password = "12345";
-        public const string API_URL = @"http://uocb.xcvgsystems.net:8080/api/uocb/";
+        public const string password = "Cl1ffdr1ve";
+        public const string API_URL = @"http://www.cliffdriveobstaclecourse.com/index.php/api/uocb/";
         public static SwearCheckerHelper swearHelper;
         public static DatabaseHelper databaseHelper;
 

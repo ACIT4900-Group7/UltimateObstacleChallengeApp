@@ -1,13 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UOCApp.AboutPage">
-
+  <ContentPage.ToolbarItems>
+    <ToolbarItem x:Name="Home" Text="Home" Icon="ihome.png" Clicked="NavHome"></ToolbarItem>
+    <ToolbarItem x:Name="Leaderboard" Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard"></ToolbarItem>
+    <ToolbarItem x:Name="Times" Text="My Times" Icon="itimes.png" Clicked="NavTimes"></ToolbarItem>
+    <ToolbarItem x:Name="Admin" Text="Admin" Icon="iadmin.png" Clicked="NavAdmin"></ToolbarItem>
+    <ToolbarItem x:Name="About" Text="About" Icon="iabout.png" Clicked="NavAbout"></ToolbarItem>
+  </ContentPage.ToolbarItems>
 <StackLayout       VerticalOptions="FillAndExpand"
                      HorizontalOptions="FillAndExpand"
                      Orientation="Vertical"
                      Spacing="15"
-                     Padding="10,0,10,0">
+                     Padding="5,5,5,5">
 
     <Image Source="htitle.png"  />
   
@@ -21,15 +27,15 @@
       
       <Label VerticalOptions="Center" HorizontalOptions="Center" LineBreakMode="WordWrap">
         <Label.Text>
-The "Admin" page on this APP, is for logging race times that are officially timed by a Teacher, Supervisor or Administrator.
-
-If you are a Teacher, Supervisor or Administrator from a school or another facility, and you'd like the password information, so you can log official race times (example: a gym teacher, or if you're hosting a special event), please email theathcote@gmail.com.
+The purpose of this APP, is so racers can track their race times performed at Cliff Drive Elementary School's "Ultimate Obstacle Course". The racers will be able to view their daily, weekly, monthly etc progress and also view a leaderboard listed by date, name, time, grade/age and school.
+						
+If you are a Teacher, Supervisor or Administrator from a school or another facility, and you'd like the password information, so you can log official race times (example: a gym teacher, or if you're hosting a special event), please email uocrepoowner@gmail.com.
 
 The yellow star shown on the Leaderboard, beside a racers name, indicates that it's an "official" race time (timed by a Teacher, Supervisor or Administrator).
 
 Racers, if you're logging your own race times, please log accurate times!
 
-If you have any comments, questions or concerns with this APP, please email theathcote@gmail.com.
+If you have any comments, questions or concerns with this APP, please email uocrepoowner@gmail.com.
         </Label.Text>
       </Label>
 

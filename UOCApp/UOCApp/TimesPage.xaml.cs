@@ -109,14 +109,20 @@ namespace UOCApp
             Navigation.PushAsync(new AdminPage());
         }
 
+		private void NavAbout(object sender, EventArgs args)
+		{
+			Navigation.PushAsync(new AboutPage());
+		}
+
         private async void ButtonDeleteClick(object sender, EventArgs args)
         {
 
             if (await DisplayAlert("Delete", "Are you sure?", "Ok", "Cancel"))
             {
-                int rowcount = 0;
+                //int rowcount = 0;
                 int result_id = (int)((Button)sender).CommandParameter;
-                rowcount = App.databaseHelper.DeleteResult(result_id);
+                //rowcount =
+					App.databaseHelper.DeleteResult(result_id);
                 RefreshResults();
             }
 

@@ -109,7 +109,7 @@ namespace UOCApp
 
 
             }
-            catch(Exception e) //pokemon exception handling
+            catch(Exception) //pokemon exception handling
             {
                 //Console.WriteLine("Caught exception " + e.Message);
                 await DisplayAlert("Alert", "An unexpected error occurred while getting the list", "OK");
@@ -146,7 +146,7 @@ namespace UOCApp
 
             await DisplayAlert("Alert", "You have been logged out successfully", "OK");
 
-            Navigation.PopAsync();
+            await Navigation.PopAsync();
         }
 
         private async void ButtonDeleteClick(object sender, EventArgs args)
@@ -164,7 +164,7 @@ namespace UOCApp
             {
                 success = await deleteHelper.DeleteResult(result_id, App.password);
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 //Console.WriteLine(e.Message);
                 success = false;
@@ -224,5 +224,14 @@ namespace UOCApp
             Navigation.PushAsync(new TimesPage());
         }
 
+        private void NavAbout(object sender, EventArgs args)
+		{
+			Navigation.PushAsync(new AboutPage());
+		}
+
+		private void NavAdmin(object sender, EventArgs args)
+		{
+			Navigation.PushAsync(new AdminPage());
+		}
     }
 }

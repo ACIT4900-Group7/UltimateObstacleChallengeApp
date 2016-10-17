@@ -1,14 +1,13 @@
-﻿using SQLite;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
+using SQLite;
 using UOCApp.Models;
 
 namespace UOCApp.Helpers
 {
-    public class DatabaseHelper
+	public class DatabaseHelper
     {
 
         
@@ -90,7 +89,7 @@ namespace UOCApp.Helpers
             foreach (Result result in db.Table<Result>())
             {
                 List<string> obstaclesList = null;
-                bool missedObstacle;
+                //bool missedObstacle;
 
                 var bridgeQuery = db.Table<ResultObstacle>().Where(v => v.result_id == result.result_id);
 

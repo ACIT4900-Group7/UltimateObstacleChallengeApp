@@ -19,7 +19,9 @@ namespace UOCApp
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
+			base.OnAppearing();
+			//TimesPage.OnAppearing(base);
+			TimesPage tp = new TimesPage();
             NavigationPage.SetHasNavigationBar(this, false);
 
             //execute timer
