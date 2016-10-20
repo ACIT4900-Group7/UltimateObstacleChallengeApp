@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UOCApp.AboutPage">
   <ContentPage.ToolbarItems>
-    <ToolbarItem x:Name="Home" Text="Home" Icon="ihome.png" Clicked="NavHome"></ToolbarItem>
-    <ToolbarItem x:Name="Leaderboard" Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard"></ToolbarItem>
-    <ToolbarItem x:Name="Times" Text="My Times" Icon="itimes.png" Clicked="NavTimes"></ToolbarItem>
-    <ToolbarItem x:Name="Admin" Text="Admin" Icon="iadmin.png" Clicked="NavAdmin"></ToolbarItem>
-    <ToolbarItem x:Name="About" Text="About" Icon="iabout.png" Clicked="NavAbout"></ToolbarItem>
+    <ToolbarItem Text="Home" Icon="ihome.png" Clicked="NavHome"></ToolbarItem>
+    <ToolbarItem Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard"></ToolbarItem>
+    <ToolbarItem Text="My Times" Icon="itimes.png" Clicked="NavTimes"></ToolbarItem>
+    <ToolbarItem Text="Admin" Icon="iadmin.png" Clicked="NavAdmin"></ToolbarItem>
+    <ToolbarItem Text="About" Icon="iabout.png" Clicked="NavAbout"></ToolbarItem>
   </ContentPage.ToolbarItems>
+<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">	
 <StackLayout       VerticalOptions="FillAndExpand"
                      HorizontalOptions="FillAndExpand"
                      Orientation="Vertical"
@@ -21,7 +22,7 @@
   
     
   
-  <ScrollView Padding="10">
+
     
     <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="15">      
       
@@ -78,9 +79,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       </Label>   
     </StackLayout>
 
-    
-  </ScrollView>
+  
   
 </StackLayout>
-
+  
+  </ScrollView>
 </ContentPage>

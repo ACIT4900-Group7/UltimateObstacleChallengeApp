@@ -130,6 +130,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
     <AndroidResource Include="Resources\Drawable\iabout.png" />
+    <AndroidResource Include="Resources\drawable\splash2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml">

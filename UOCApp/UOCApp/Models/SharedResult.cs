@@ -39,8 +39,8 @@ namespace UOCApp
         public SharedResult(DateTime date, Decimal time, Boolean ranked, Boolean flagged,
             String student_name, String student_gender, int student_grade, String school_name)
         {
-            if (date != null && time != null && ranked != null && flagged != null &&
-                student_name != null && student_gender != null && student_grade != null && school_name != null
+            if (
+                student_name != null && student_gender != null && school_name != null
             )
             {
 				if (time < 30)// minimum acceptable time in seconds
@@ -105,7 +105,8 @@ namespace UOCApp
 				try {
 	                var response = await client.PostAsync(App.API_URL + "result/", content);
 					//Console.WriteLine("post response code: " + response.StatusCode);
-					var responseString = await response.Content.ReadAsStringAsync(); //what does this do??
+					//var responseString = 
+						await response.Content.ReadAsStringAsync(); //what does this do??
 						if ((int)response.StatusCode == 201)
 						{
 							return true;
@@ -116,7 +117,7 @@ namespace UOCApp
 							return false;
 						}
 				}
-				catch(Exception e) { //pokemon
+				catch(Exception) { //pokemon
 					return false;
 				}
 

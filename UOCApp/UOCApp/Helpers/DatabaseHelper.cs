@@ -203,7 +203,7 @@ namespace UOCApp.Helpers
             }
             if (!obstacleList.Switch_11)
             {
-                obstacle.obstacle_id = 11;
+				obstacle.obstacle_id = 11;
                 db.Insert(obstacle);
            
             }

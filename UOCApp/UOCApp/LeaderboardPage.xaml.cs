@@ -51,10 +51,10 @@ namespace UOCApp
 		private async void GetResults()
 		{
 			//build the querystring with the help of the helper
-			string selectedPeriod = !(PickerPeriod == null) ? PickerPeriod.Items[PickerPeriod.SelectedIndex] : "Daily";
-			string selectedGrade = !(PickerGrade == null) ? PickerGrade.Items[PickerGrade.SelectedIndex] : "Grade 4";
-			string selectedGender = !(PickerGender == null) ? PickerGender.Items[PickerGender.SelectedIndex] : "Male";
-			string selectedSchool = !(EntrySchool == null) ? EntrySchool.Text : null;
+			string selectedPeriod = !(PickerPeriod == null) ? PickerPeriod.Items[PickerPeriod.SelectedIndex] : "Include All";
+			string selectedGrade = !(PickerGrade == null) ? PickerGrade.Items[PickerGrade.SelectedIndex] : "Include All";
+			string selectedGender = !(PickerGender == null) ? PickerGender.Items[PickerGender.SelectedIndex] : "Include All";
+			string selectedSchool = null;
 			string query = resultsHelper.CreateQueryString(selectedPeriod, selectedGrade, selectedGender, selectedSchool, official);
 
 			//try to get the count

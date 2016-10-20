@@ -4,11 +4,17 @@
              x:Class="UOCApp.StopwatchPage">
 
   <ContentPage.ToolbarItems>
-    <ToolbarItem x:Name="Home" Text="Home" Icon="ihome.png" Clicked="NavHome"></ToolbarItem>
-    <ToolbarItem x:Name="Leaderboard" Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard"></ToolbarItem>
-    <ToolbarItem x:Name="Times" Text="My Times" Icon="itimes.png" Clicked="NavTimes"></ToolbarItem>
-    <ToolbarItem x:Name="Admin" Text="Admin" Icon="iadmin.png" Clicked="NavAdmin"></ToolbarItem>
-    <ToolbarItem x:Name="About" Text="About" Icon="iabout.png" Clicked="NavAbout"></ToolbarItem>
+		<ToolbarItem Text="Home" Icon="ihome.png" Clicked="NavHome">
+		</ToolbarItem>
+		<ToolbarItem Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard">
+		</ToolbarItem>
+		<ToolbarItem Text="My Times" Icon="itimes.png" Clicked="NavTimes">
+		</ToolbarItem>
+		<ToolbarItem Text="Admin" Icon="iadmin.png" Clicked="NavAdmin">
+		</ToolbarItem>
+		<ToolbarItem Text="About" Icon="iabout.png" Clicked="NavAbout">
+		</ToolbarItem>
+
   </ContentPage.ToolbarItems>
   <StackLayout       VerticalOptions="FillAndExpand"
                      HorizontalOptions="FillAndExpand"
