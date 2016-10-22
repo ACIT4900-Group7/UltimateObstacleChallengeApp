@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="UOCApp.ObstaclesPage">
-	<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="10" Padding="20,20,20,10">
-		<Label Text="Obstacle List" FontSize="Large" HorizontalTextAlignment="Center" />
-		<Label Text="Deselect incomplete obstacles." FontSize="Small" HorizontalTextAlignment="Center" />
-		<ScrollView Padding="10">
+	<ScrollView Padding="10">
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="10" Padding="20,20,20,10">
+			<Label Text="Obstacle List" FontSize="Large" HorizontalTextAlignment="Center" />
+			<Label Text="Deselect incomplete obstacles." FontSize="Small" HorizontalTextAlignment="Center" />
 			<Grid HorizontalOptions="FillAndExpand">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto" />
@@ -50,6 +50,6 @@
 				<Switch IsToggled="True" Grid.Row="12" Grid.Column="1" x:Name="switch_11" />
 				<Button Text="Ok" HorizontalOptions="Center" Grid.ColumnSpan="2" Clicked="OnSaveButtonClicked" Grid.Row="13" Grid.Column="0" />
 			</Grid>
-		</ScrollView>
-	</StackLayout>
+		</StackLayout>
+	</ScrollView>
 </ContentPage>

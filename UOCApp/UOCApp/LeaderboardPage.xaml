@@ -12,7 +12,7 @@
 		<ToolbarItem Text="About" Icon="iabout.png" Clicked="NavAbout">
 		</ToolbarItem>
 	</ContentPage.ToolbarItems>
-	<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+	<!--<ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">-->
 		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="15" Padding="5,5,5,5">
 			<Label Text="Leaderboard" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" />
 			<Label Text="Open results" FontSize="Small" VerticalOptions="Center" HorizontalOptions="Center" x:Name="LabelDescription" />
@@ -32,7 +32,7 @@
 						<x:String>Monthly</x:String>
 						<x:String>Include All</x:String>
 					</Picker.Items>
-					<Picker.SelectedIndex>4</Picker.SelectedIndex>
+					<Picker.SelectedIndex>0</Picker.SelectedIndex>
 				</Picker>
 				<Button Text="Show Official" Clicked="ButtonOfficialClick" x:Name="ButtonOfficial" Grid.Row="0" Grid.Column="1" />
 				<Picker Title="Grade" HorizontalOptions="FillAndExpand" SelectedIndexChanged="FilterChange" x:Name="PickerGrade" Grid.Row="1" Grid.Column="0">
@@ -45,7 +45,7 @@
 						<x:String>Grade 5</x:String>
 						<x:String>Grade 6</x:String>
 						<x:String>Grade 7</x:String>
-						<x:String>Teenager 14+</x:String>
+						<x:String>Teenager 13+</x:String>
 						<x:String>Adult 19+</x:String>
 						<x:String>Adult 35+</x:String>
 						<x:String>Include All</x:String>
@@ -66,7 +66,7 @@
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
-							<StackLayout BackgroundColor="#eee" Orientation="Vertical">
+							<StackLayout BackgroundColor="#eee" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 								<Grid>
 									<Grid.RowDefinitions>
 										<RowDefinition Height="Auto" />
@@ -89,5 +89,5 @@
 			</ListView>
 			<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
 		</StackLayout>
-	</ScrollView>
+	<!--</ScrollView>-->
 </ContentPage>

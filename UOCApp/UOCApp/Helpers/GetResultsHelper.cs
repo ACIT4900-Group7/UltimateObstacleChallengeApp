@@ -140,7 +140,7 @@ namespace UOCApp.Helpers
             switch (selectedGrade)
             {
 				case "Kindergarten":
-					grade = 0;
+					grade = -4;
 					break;
 				case "Grade 1":
 					grade = 1;
@@ -163,7 +163,7 @@ namespace UOCApp.Helpers
                 case "Grade 7":
                     grade = 7;
                     break;
-                case "Teenager 14+":
+                case "Teenager 13+":
                     grade = -1;
                     break;
                 case "Adult 19+":
@@ -207,7 +207,7 @@ namespace UOCApp.Helpers
 
         public string CreateQueryString(string selectedGrade, string selectedGender, string school)
         {
-            return CreateQueryString(null, selectedGrade, selectedGender, school, false);
+            return CreateQueryString("alltime", selectedGrade, selectedGender, school, false);
         }
 
 		public static void SortResults(List<AdminResult> baseResults, string selectedItem)

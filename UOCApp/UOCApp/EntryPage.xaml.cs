@@ -185,7 +185,7 @@ namespace UOCApp
 			switch (GradeIndex)
 			{
 				case 0:
-					Grade = 0;
+					Grade = -4;
 					break;
 				case 1:
 					Grade = 1;

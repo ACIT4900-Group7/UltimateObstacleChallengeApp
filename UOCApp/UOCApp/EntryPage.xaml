@@ -41,7 +41,7 @@
 			<Label Text="Grade" Grid.Row="1" Grid.Column="0" FontSize="Large" HorizontalTextAlignment="End" />
 			<Picker Title="Grade" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" x:Name="picker_Grade">
 				<Picker.Items>
-						<x:String>Kindergarten</x:String> 
+					<x:String>Kindergarten</x:String> 
 					<x:String>Grade 1</x:String>
 					<x:String>Grade 2</x:String>
 					<x:String>Grade 3</x:String>
