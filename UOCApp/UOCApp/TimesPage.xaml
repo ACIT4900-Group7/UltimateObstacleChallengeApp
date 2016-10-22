@@ -10,7 +10,7 @@
     <ToolbarItem Text="About" Icon="iabout.png" Clicked="NavAbout"></ToolbarItem>
 	
 	</ContentPage.ToolbarItems>
-	<ScrollView  Orientation = "Vertical" VerticalOptions="FillAndExpand">	
+	<!--<ScrollView  Orientation = "Vertical" VerticalOptions="FillAndExpand">	-->
 	<StackLayout 
 			VerticalOptions="FillAndExpand" 
 			HorizontalOptions="FillAndExpand" 
@@ -82,5 +82,6 @@
    
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
 
-	</StackLayout></ScrollView>
+	</StackLayout>
+	<!--</ScrollView>-->
 </ContentPage>
