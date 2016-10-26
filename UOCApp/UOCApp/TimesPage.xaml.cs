@@ -27,7 +27,7 @@ namespace UOCApp
 			//results.Add(new PrivateResult { result_id = 5, student_name = "John Doe", date = "April 28 2016", time = "11:11.111" });
 		}
 
-		protected override async void OnAppearing()
+		protected override void OnAppearing()
 		{
 			base.OnAppearing();
 

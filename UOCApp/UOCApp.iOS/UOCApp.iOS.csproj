@@ -57,8 +57,9 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Distribution: Crystal Pyrik (H2THLFWW2S)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+<CodesignProvision>e87740be-809a-417b-b689-82cc719ea720</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>

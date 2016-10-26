@@ -36,7 +36,7 @@ namespace UOCApp
 
 		}
 
-		protected override async void OnAppearing() //is this safe?
+		protected override void OnAppearing() //is this safe?
 		{
 			//initial get
 
