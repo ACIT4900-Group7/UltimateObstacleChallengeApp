@@ -25,6 +25,7 @@ namespace UOCApp
         protected override void OnAppearing()
         {
             base.OnAppearing();
+			//TimesPage.OnAppearing(base);
             startTime = 0;
             result = 0;
 
@@ -72,10 +73,10 @@ namespace UOCApp
             Navigation.PushAsync(new EntryPage(displayTime)); //should this be modal?
         }
 
-        private void ButtonAboutClick(object sender, EventArgs args)
-        {
-            Navigation.PushAsync(new AboutPage());
-        }
+        //private void ButtonAboutClick(object sender, EventArgs args)
+        //{
+        //    Navigation.PushAsync(new AboutPage());
+        //}
 
 
         private void NavLeaderboard(object sender, EventArgs args)
@@ -83,15 +84,26 @@ namespace UOCApp
             Navigation.PushAsync(new LeaderboardPage());
         }
 
+		private void NavHome(object sender, EventArgs args)
+		{
+			// Console.WriteLine("Clicked Nav Home");
+			Navigation.PopToRootAsync();
+		}
+
         private void NavTimes(object sender, EventArgs args)
         {
             Navigation.PushAsync(new TimesPage());
         }
 
-        private void NavAdmin(object sender, EventArgs args)
+        private void NavAbout(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new AdminPage());
+            Navigation.PushAsync(new AboutPage());
         }
+
+		private void NavAdmin(object sender, EventArgs args)
+		{
+			Navigation.PushAsync(new AdminPage());
+		}
 
         private void startTimer()
         {

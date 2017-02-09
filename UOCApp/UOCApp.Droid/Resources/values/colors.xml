@@ -2,4 +2,5 @@
 <resources>
   <color name="uoca_silver">#D0D0D0</color>
   <color name="uoca_gray">#303030</color>
+	<color name="uoca_blue">#0084aa</color>
 </resources>

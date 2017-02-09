@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="splash2.png" translatesAutoresizingMaskIntoConstraints="NO" id="23" misplaced="YES">
                                 <rect key="frame" x="270" y="270" width="60" height="60"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                             </imageView>
@@ -34,6 +34,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="iabout.png" width="35" height="35"/>
+        <image name="splash2.png" width="840" height="1440"/>
+        <image name="logo.png" width="375" height="140"/>
+        <image name="iadmin.png" width="30" height="30"/>
+        <image name="ihome.png" width="30" height="30"/>
+        <image name="ileaderboard.png" width="30" height="30"/>
+        <image name="itimes.png" width="30" height="30"/>
+        <image name="htitle.png" width="800" height="160"/>
+        <image name="ifacebook.png" width="48" height="48"/>
+        <image name="iinstagram.png" width="48" height="48"/>
+        <image name="star.png" width="32" height="32"/>
+        <image name="obst.png" width="24" height="24"/>
     </resources>
 </document>

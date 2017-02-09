@@ -1,19 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UOCApp.TimesPage">
   <ContentPage.ToolbarItems>
-    <ToolbarItem x:Name="Home" Text="Home" Icon="ihome.png" Clicked="NavHome"></ToolbarItem>
-    <ToolbarItem x:Name="Leaderboard" Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard"></ToolbarItem>
-    <ToolbarItem x:Name="Times" Text="My Times" Icon="itimes.png"></ToolbarItem>
-    <ToolbarItem x:Name="Admin" Text="Admin" Icon="iadmin.png" Clicked="NavAdmin"></ToolbarItem>
-  </ContentPage.ToolbarItems>
-
-      <StackLayout       VerticalOptions="FillAndExpand"
-                     HorizontalOptions="FillAndExpand"
-                     Orientation="Vertical"
-                     Spacing="15"
-                     Padding="10,0,10,0">
+	<ToolbarItem Text="Home" Icon="ihome.png" Clicked="NavHome"></ToolbarItem>
+    <ToolbarItem Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard"></ToolbarItem>
+    <ToolbarItem Text="My Times" Icon="itimes.png" Clicked="NavTimes"></ToolbarItem>
+    <ToolbarItem Text="Admin" Icon="iadmin.png" Clicked="NavAdmin"></ToolbarItem>
+    <ToolbarItem Text="About" Icon="iabout.png" Clicked="NavAbout"></ToolbarItem>
+	
+	</ContentPage.ToolbarItems>
+	<!--<ScrollView  Orientation = "Vertical" VerticalOptions="FillAndExpand">	-->
+	<StackLayout 
+			VerticalOptions="FillAndExpand" 
+			HorizontalOptions="FillAndExpand" 
+			Orientation="Vertical" 
+			Spacing="10" 
+			Padding="5,5,5,5">
 
         <Label Text="My Times" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" />
 
@@ -56,7 +59,7 @@
 
               </Grid.RowDefinitions>
               <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -64,10 +67,10 @@
                 <!-- <ColumnDefinition Width="Auto" /> -->
               </Grid.ColumnDefinitions>
 
-              <Label Text="{Binding student_name}"  FontSize="15" Grid.Column="0" Grid.Row="0" />
-              <Label Text="{Binding date}"  FontSize="15" Grid.Column="1" Grid.Row="0"/>
-              <Label Text="{Binding time}" FontSize="15" Grid.Column="2" Grid.Row="0"/>
-              <Button Text="!" TextColor="Red"  FontSize="30" IsEnabled="{Binding missedObstacle}" Clicked="ButtonQueryClick"  CommandParameter="{Binding result_id}" Grid.Column="3" Grid.Row="0" />
+              <Label Text="{Binding student_name}"  FontSize="12" Grid.Column="0" Grid.Row="0" />
+              <Label Text="{Binding date}"  FontSize="12" Grid.Column="1" Grid.Row="0"/>
+              <Label Text="{Binding time}" FontSize="12" Grid.Column="2" Grid.Row="0"/>
+              <Button Text="!" TextColor="Red"  FontSize="18" IsEnabled="{Binding missedObstacle}" Clicked="ButtonQueryClick"  CommandParameter="{Binding result_id}" Grid.Column="3" Grid.Row="0" />
               <Button Text="X"  TextColor="Red" Clicked="ButtonDeleteClick" Grid.Column="4" Grid.Row="0" CommandParameter="{Binding result_id}" />
               <!-- <Button Text="S" Clicked="ButtonShareClick"  CommandParameter="{Binding result_id}" Grid.Column="4" Grid.Row="0" /> -->
             </Grid>
@@ -78,5 +81,7 @@
   </ListView>
    
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
-   </StackLayout>
+
+	</StackLayout>
+	<!--</ScrollView>-->
 </ContentPage>

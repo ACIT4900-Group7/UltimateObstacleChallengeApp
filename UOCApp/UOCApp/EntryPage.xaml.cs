@@ -38,6 +38,12 @@ namespace UOCApp
 			Navigation.PopToRootAsync();
 		}
 
+		private void NavAbout(object sender, EventArgs args)
+		{
+			// Console.WriteLine("Clicked Nav Home");
+			Navigation.PushAsync(new AboutPage());
+		}
+
 		private void NavLeaderboard(object sender, EventArgs args)
 		{
 			// Console.WriteLine("Clicked Nav Leaderboard");
@@ -179,24 +185,36 @@ namespace UOCApp
 			switch (GradeIndex)
 			{
 				case 0:
-					Grade = 4;
+					Grade = -4;
 					break;
 				case 1:
-					Grade = 5;
+					Grade = 1;
 					break;
 				case 2:
-					Grade = 6;
+					Grade = 2;
 					break;
 				case 3:
+					Grade = 3;
+					break;
+				case 4:
+					Grade = 4;
+					break;
+				case 5:
+					Grade = 5;
+					break;
+				case 6:
+					Grade = 6;
+					break;
+				case 7:
 					Grade = 7;
 					break;
-				case 4:  //				GRADE_TEENAGER = -1
+				case 8:  //				GRADE_TEENAGER = -1
 					Grade = -1;
 					break;
-				case 5:  //				GRADE_ADULT = -2
+				case 9:  //				GRADE_ADULT = -2
 					Grade = -2;
 					break;
-				case 6:  //				GRADE_OLDADULT = -3
+				case 10:  //				GRADE_OLDADULT = -3
 					Grade = -3;
 					break;
 				default:
@@ -237,9 +255,9 @@ namespace UOCApp
 			return Decimal.Round(result, 3);
             }
         
-        catch (FormatException e)
+        catch (FormatException)
         {
-                throw new ArgumentException("Invalid Time\n Minimum 30 seconds\n Please enter as Minutes:Seconds");
+				throw new ArgumentException("Invalid Time\n Minimum 30 seconds\n Please enter as Minutes:Seconds");
 
         }
 		}
@@ -251,6 +269,7 @@ namespace UOCApp
 			if (obstaclesPage.obstacleList.allComplete())
 			{
 				switch_Public.IsEnabled = true;
+				switch_Public.IsToggled = true;
 				label_obstacle.Opacity = 0;
 			}
 			else
@@ -258,6 +277,7 @@ namespace UOCApp
 				switch_Public.IsToggled = false;
 				switch_Public.IsEnabled = false;
 				label_obstacle.Opacity = 1;
+				switch_Official.IsToggled = false;
 			}
 
 		}
@@ -271,6 +291,7 @@ namespace UOCApp
 			}
 			if (loggedIn)
 			{
+				switch_Official.IsToggled = true;
 				switch_Official.IsEnabled = true;
 				switch_Official.Opacity = 1;
 				label_Official.Opacity = 1;
@@ -291,16 +312,5 @@ namespace UOCApp
 			OfficialButtonStatus(); // update the offical button status dependant on if the user is logged in or not
 			ShareButtonStatus(); // update the share buttons status dependant on if all obstacles are complete
 		}
-
-  
-            
-
-
-
-        
-
-
-
-
 	}
 }

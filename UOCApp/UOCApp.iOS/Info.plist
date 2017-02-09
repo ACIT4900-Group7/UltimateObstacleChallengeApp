@@ -13,19 +13,13 @@
 	<key>MinimumOSVersion</key>
 	<string>7.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>Ultimate Obstacle Course</string>
+	<string>Cliff Drive Obstacle Course</string>
 	<key>CFBundleIdentifier</key>
-	<string>ca.deltasd.uocapp</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>com.deltasd.uocapp</string>
 	<key>CFBundleIconFiles</key>
 	<array/>
-	<key>CFBundleShortVersionString</key>
-	<string>1</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
-	<key>XSLaunchImageAssets</key>
-	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
@@ -40,5 +34,13 @@
 	<true/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackTranslucent</string>
+	<key>CFBundleName</key>
+	<string>Cliff Drive Obstacle Course</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2</string>
+	<key>CFBundleVersion</key>
+	<string>2.0</string>
 </dict>
 </plist>

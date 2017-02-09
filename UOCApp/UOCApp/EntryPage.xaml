@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="UOCApp.EntryPage">
 	<ContentPage.ToolbarItems>
-		<ToolbarItem x:Name="Home" Text="Home" Icon="ihome.png" Clicked="NavHome">
+	<ToolbarItem Text="Home" Icon="ihome.png" Clicked="NavHome"></ToolbarItem>
+    <ToolbarItem Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard"></ToolbarItem>
+    <ToolbarItem Text="My Times" Icon="itimes.png" Clicked="NavTimes"></ToolbarItem>
+    <ToolbarItem Text="Admin" Icon="iadmin.png" Clicked="NavAdmin"></ToolbarItem>
+    <ToolbarItem Text="About" Icon="iabout.png" Clicked="NavAbout"></ToolbarItem>
+		<!--<ToolbarItem x:Name="Home" Text="Home" Icon="ihome.png" Clicked="NavHome">
 		</ToolbarItem>
 		<ToolbarItem x:Name="Leaderboard" Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard">
 		</ToolbarItem>
 		<ToolbarItem x:Name="Times" Text="My Times" Icon="itimes.png" Clicked="NavTimes">
 		</ToolbarItem>
 		<ToolbarItem x:Name="Admin" Text="Admin" Icon="iadmin.png" Clicked="NavAdmin">
-		</ToolbarItem>
+		</ToolbarItem>-->
 	</ContentPage.ToolbarItems>
-	<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical" Spacing="10" Padding="10,10,10,0">
-		<Grid>
+	<ScrollView  Orientation = "Vertical" VerticalOptions="FillAndExpand">	
+	<StackLayout 
+			VerticalOptions="FillAndExpand" 
+			HorizontalOptions="FillAndExpand" 
+			Orientation="Vertical" 
+			Spacing="10" 
+			Padding="5,5,5,5">
+
+			<Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto" />
 				<RowDefinition Height="Auto" />
@@ -29,6 +41,10 @@
 			<Label Text="Grade" Grid.Row="1" Grid.Column="0" FontSize="Large" HorizontalTextAlignment="End" />
 			<Picker Title="Grade" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" x:Name="picker_Grade">
 				<Picker.Items>
+					<x:String>Kindergarten</x:String> 
+					<x:String>Grade 1</x:String>
+					<x:String>Grade 2</x:String>
+					<x:String>Grade 3</x:String>
 					<x:String>Grade 4</x:String> 
 					<x:String>Grade 5</x:String>
 					<x:String>Grade 6</x:String>
@@ -60,17 +76,17 @@
 		<Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto" />
 				<ColumnDefinition Width="*" />
-				<ColumnDefinition Width="Auto" />
-				<ColumnDefinition Width="*" />
+
 			</Grid.ColumnDefinitions>
 			<Label Text="Share with leaderboard:" Grid.Row="0" Grid.Column="0" />
 			<Switch IsToggled="True" Grid.Row="0" Grid.Column="1" x:Name="switch_Public" />
-			<Label Text="Official:" Opacity="0" Grid.Row="0" Grid.Column="2" x:Name="label_Official" />
-			<Switch IsToggled="False" Opacity="0" Grid.Row="0" Grid.Column="3" x:Name="switch_Official" />
+			<Label Text="Official:" Opacity="0" Grid.Row="1" Grid.Column="0" x:Name="label_Official" />
+			<Switch IsToggled="False" Opacity="0" Grid.Row="1" Grid.Column="1" x:Name="switch_Official" />
 		</Grid>
 		<Label FontSize="Small" Text="Fastest times will be visible on the leaderboard." />
 		<Grid>
@@ -86,5 +102,6 @@
 			<!-- <Label Text="Share" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/> -->
 			<Button Text="Save Result" HorizontalOptions="Center" Grid.ColumnSpan="3" Clicked="SaveResult" Grid.Column="0" Grid.Row="1" />
 		</Grid>
-	</StackLayout>
+			
+	</StackLayout></ScrollView>
 </ContentPage>

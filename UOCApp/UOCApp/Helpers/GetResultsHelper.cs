@@ -139,6 +139,18 @@ namespace UOCApp.Helpers
             int grade = 0;
             switch (selectedGrade)
             {
+				case "Kindergarten":
+					grade = -4;
+					break;
+				case "Grade 1":
+					grade = 1;
+					break;
+				case "Grade 2":
+					grade = 2;
+					break;
+				case "Grade 3":
+					grade = 3;
+					break;
                 case "Grade 4":
                     grade = 4;
                     break;
@@ -151,7 +163,7 @@ namespace UOCApp.Helpers
                 case "Grade 7":
                     grade = 7;
                     break;
-                case "Teenager 14+":
+                case "Teenager 13+":
                     grade = -1;
                     break;
                 case "Adult 19+":
@@ -160,12 +172,23 @@ namespace UOCApp.Helpers
                 case "Adult 35+":
                     grade = -3;
                     break;
+				default:
+					grade = 8;
+					break;
             }
-            output += "student_grade=" + grade;
+			if (grade != 8)
+			{
+				output += "student_grade=" + grade;
+			}
+            
 
             //pop the first letter (Male or Female) off and use that
+
             string gender = Convert.ToString(selectedGender[0]).ToUpper();
-            output += "&student_gender=" + gender;
+			if (gender == "M" || gender == "F")
+			{
+				output += "&student_gender=" + gender;
+			}
 
             //get school and append if it's not null
             if (!String.IsNullOrEmpty(school))
@@ -184,10 +207,10 @@ namespace UOCApp.Helpers
 
         public string CreateQueryString(string selectedGrade, string selectedGender, string school)
         {
-            return CreateQueryString(null, selectedGrade, selectedGender, school, false);
+            return CreateQueryString("alltime", selectedGrade, selectedGender, school, false);
         }
 
-        public static void SortResults(List<AdminResult> baseResults, string selectedItem)
+		public static void SortResults(List<AdminResult> baseResults, string selectedItem)
         {
             switch (selectedItem)
             {

@@ -1,19 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
              x:Class="UOCApp.StopwatchPage">
 
   <ContentPage.ToolbarItems>
-    <ToolbarItem x:Name="Home" Text="Home" Icon="ihome.png"></ToolbarItem>
-    <ToolbarItem x:Name="Leaderboard" Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard"></ToolbarItem>
-    <ToolbarItem x:Name="Times" Text="My Times" Icon="itimes.png" Clicked="NavTimes"></ToolbarItem>
-    <ToolbarItem x:Name="Admin" Text="Admin" Icon="iadmin.png" Clicked="NavAdmin"></ToolbarItem>
+		<ToolbarItem Text="Home" Icon="ihome.png" Clicked="NavHome">
+		</ToolbarItem>
+		<ToolbarItem Text="Leaderboard" Icon="ileaderboard.png" Clicked="NavLeaderboard">
+		</ToolbarItem>
+		<ToolbarItem Text="My Times" Icon="itimes.png" Clicked="NavTimes">
+		</ToolbarItem>
+		<ToolbarItem Text="Admin" Icon="iadmin.png" Clicked="NavAdmin">
+		</ToolbarItem>
+		<ToolbarItem Text="About" Icon="iabout.png" Clicked="NavAbout">
+		</ToolbarItem>
+
   </ContentPage.ToolbarItems>
   <StackLayout       VerticalOptions="FillAndExpand"
                      HorizontalOptions="FillAndExpand"
                      Orientation="Vertical"
                      Spacing="15"
-                     Padding="10,0,10,0">
+                     Padding="5,5,5,5">
 
     <Image Source="htitle.png"  />
 
@@ -80,11 +87,11 @@
                 Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
       
     </Grid>
-
+<!--
     <Button Text="About This App" 
             Clicked="ButtonAboutClick" 
             VerticalOptions="End">
-    </Button>
+    </Button>-->
 
   </StackLayout>
 
